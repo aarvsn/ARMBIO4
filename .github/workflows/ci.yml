@@ -36,10 +36,34 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
+      - name: Check Java and Gradle environment
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME"
+          echo "JAVA_OPTS=$JAVA_OPTS"
+          echo "GRADLE_OPTS=$GRADLE_OPTS"
+          echo "JAVA_TOOL_OPTIONS=$JAVA_TOOL_OPTIONS"
+          echo "--- Java version ---"
+          java -version
+          echo "--- Gradle version ---"
+          ./gradlew --version
+          echo "--- Gradle JVM options ---"
+          grep -n "DEFAULT_JVM_OPTS" gradlew || true
+          echo "--- Search for Xmx64m/Xms64m ---"
+          grep -R --exclude-dir=.git --exclude-dir=build \
+            -nE 'Xmx64m|Xms64m' . || true
+
       - name: Build debug APK
+        env:
+          JAVA_OPTS: ""
+          GRADLE_OPTS: ""
+          JAVA_TOOL_OPTIONS: ""
         run: ./gradlew assembleDebug --stacktrace
 
       - name: Build release APK
+        env:
+          JAVA_OPTS: ""
+          GRADLE_OPTS: ""
+          JAVA_TOOL_OPTIONS: ""
         run: ./gradlew assembleRelease --stacktrace
 
       - name: Upload debug APK
@@ -83,7 +107,23 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
+      - name: Check Java and Gradle environment
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME"
+          echo "JAVA_OPTS=$JAVA_OPTS"
+          echo "GRADLE_OPTS=$GRADLE_OPTS"
+          echo "JAVA_TOOL_OPTIONS=$JAVA_TOOL_OPTIONS"
+          java -version
+          ./gradlew --version
+          grep -n "DEFAULT_JVM_OPTS" gradlew || true
+          grep -R --exclude-dir=.git --exclude-dir=build \
+            -nE 'Xmx64m|Xms64m' . || true
+
       - name: Run lint
+        env:
+          JAVA_OPTS: ""
+          GRADLE_OPTS: ""
+          JAVA_TOOL_OPTIONS: ""
         run: ./gradlew lint --stacktrace
 
       - name: Upload lint report
@@ -107,6 +147,9 @@ jobs:
       - name: Check C code formatting
         run: |
           find app/src/main/cpp -name "*.c" -o -name "*.h" | while read f; do
-            diff <(clang-format "$f") "$f" || (echo "❌ $f needs formatting" && exit 1)
+            diff <(clang-format "$f") "$f" || (
+              echo "❌ $f needs formatting"
+              exit 1
+            )
           done
         continue-on-error: true
