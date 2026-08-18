@@ -168,7 +168,7 @@ public class Bio4PreActivity extends Activity {
         Log.i(TAG, "Main onDestroy");
         mIsAppAlive = false;
         if (mNativeBridge != null) {
-            mNativeBridge.onDestroy();
+            mNativeBridge.nativeOnDestroy();
         }
     }
 
