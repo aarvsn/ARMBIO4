@@ -1,0 +1,125 @@
+# ARMBIO4 - Open Source Software Notices
+
+This application contains or uses the following open source software:
+
+================================================================================
+1. Android Open Source Project (AOSP)
+================================================================================
+Copyright (C) The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+================================================================================
+2. Android NDK (Native Development Kit)
+================================================================================
+Copyright (C) Google Inc.
+
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+3. AndroidX Libraries
+================================================================================
+Copyright (C) The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+
+Includes:
+  - androidx.appcompat:appcompat (1.6.1)
+  - androidx.core:core (1.12.0)
+
+================================================================================
+4. OpenGL ES / EGL
+================================================================================
+OpenGL is a registered trademark of Silicon Graphics, Inc.
+OpenGL ES is a trademark of Silicon Graphics, Inc.
+
+The OpenGL ES and EGL specifications are developed by Khronos Group.
+https://www.khronos.org/opengles/
+
+Specifications are available under the SGI Free Software License B
+and/or Khronos Specification License.
+
+================================================================================
+5. FreeType (if used for font rendering)
+================================================================================
+Copyright (C) 1996-2023 David Turner, Robert Wilhelm, and Werner Lemberg
+
+Licensed under the FreeType License (FTL) or GNU General Public License v2.
+https://www.freetype.org/
+
+FreeType License:
+https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/docs/FTL.TXT
+
+================================================================================
+6. libpng (if used for PNG image handling)
+================================================================================
+Copyright (C) 1998-2023 Glenn Randers-Pehrson
+Copyright (C) 1996-1997 Andreas Dilger
+Copyright (C) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
+
+Licensed under the libpng license.
+http://www.libpng.org/pub/png/libpng.html
+
+================================================================================
+7. zlib (if used for compression)
+================================================================================
+Copyright (C) 1995-2023 Jean-loup Gailly and Mark Adler
+
+Licensed under the zlib License.
+https://zlib.net/
+
+================================================================================
+8. bzip2 (if used for compression)
+================================================================================
+Copyright (C) 1996-2010 Julian R Seward
+
+Licensed under the BSD-style license.
+https://sourceware.org/bzip2/
+
+================================================================================
+9. OpenSL ES (Open Sound Library for Embedded Systems)
+================================================================================
+Copyright (C) Khronos Group
+
+Used for audio playback on Android via android.media APIs.
+Specifications available under Khronos Specification License.
+https://www.khronos.org/opensles/
+
+================================================================================
+10. bio4 (Original Vita Port Reference)
+================================================================================
+Copyright (C) Moqi01 
+
+Original source code used as reference for the ARMBIO4 port.
+The original Vita port is an independent reverse-engineering project
+that reimplements Android runtime APIs for PS Vita.
+
+This project (ARMBIO4) does not include any code from the original
+game (Biohazard 4 / Resident Evil 4). It is a compatibility wrapper
+that loads and runs the original game's unmodified native libraries
+on Android using standard Android APIs.
+
+================================================================================
+
+DISCLAIMER:
+
+Biohazard 4 / Resident Evil 4 is a trademark of Capcom Co., Ltd.
+This project is NOT affiliated with, endorsed by, or connected to
+Capcom in any way. The game's native libraries must be provided by
+the user from their own legally obtained copy of the game.
+
+This wrapper project only provides a compatibility layer to run
+existing game binaries on Android devices. No game assets, code,
+or copyrighted material from Capcom is included in this project.

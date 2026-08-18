@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- OSS Licenses metadata for Google Play compliance -->
+    <string name="oss_licenses_summary">This app uses AOSP, AndroidX, OpenGL ES, and other open source libraries.</string>
+</resources>

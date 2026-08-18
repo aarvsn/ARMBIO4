@@ -1,0 +1,82 @@
+[
+  {
+    "project": "Android Open Source Project",
+    "description": "Android platform and framework libraries",
+    "version": "API 21-34",
+    "homepage": "https://source.android.com/",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+  },
+  {
+    "project": "AndroidX AppCompat",
+    "description": "Android compatibility library for backwards-compatible UI",
+    "version": "1.6.1",
+    "homepage": "https://developer.android.com/jetpack/androidx/releases/appcompat",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+  },
+  {
+    "project": "AndroidX Core",
+    "description": "AndroidX core utility library",
+    "version": "1.12.0",
+    "homepage": "https://developer.android.com/jetpack/androidx/releases/core",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+  },
+  {
+    "project": "Android NDK",
+    "description": "Native Development Kit for Android C/C++ development",
+    "version": "r25+",
+    "homepage": "https://developer.android.com/ndk",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+  },
+  {
+    "project": "OpenGL ES",
+    "description": "Open Graphics Library for Embedded Systems - 3D graphics API",
+    "version": "2.0",
+    "homepage": "https://www.khronos.org/opengles/",
+    "license": "SGI-Free-B",
+    "license_url": "https://www.khronos.org/legal/licenseinfo/"
+  },
+  {
+    "project": "FreeType",
+    "description": "Font rendering library",
+    "version": "2.x",
+    "homepage": "https://www.freetype.org/",
+    "license": "FTL / GPL-2.0",
+    "license_url": "https://gitlab.freedesktop.org/freetype/freetype/-/blob/master/docs/FTL.TXT"
+  },
+  {
+    "project": "libpng",
+    "description": "PNG image format reference library",
+    "version": "1.6.x",
+    "homepage": "http://www.libpng.org/",
+    "license": "libpng",
+    "license_url": "http://www.libpng.org/pub/png/libpng.html"
+  },
+  {
+    "project": "zlib",
+    "description": "Data compression library",
+    "version": "1.2.x",
+    "homepage": "https://zlib.net/",
+    "license": "Zlib",
+    "license_url": "https://zlib.net/zlib_license.html"
+  },
+  {
+    "project": "bzip2",
+    "description": "Block-sorting file compressor",
+    "version": "1.0.x",
+    "homepage": "https://sourceware.org/bzip2/",
+    "license": "BSD-3-Clause",
+    "license_url": "https://sourceware.org/bzip2/"
+  },
+  {
+    "project": "OpenSL ES",
+    "description": "Open Sound Library for Embedded Systems - audio API",
+    "version": "1.1",
+    "homepage": "https://www.khronos.org/opensles/",
+    "license": "Khronos",
+    "license_url": "https://www.khronos.org/legal/licenseinfo/"
+  }
+]

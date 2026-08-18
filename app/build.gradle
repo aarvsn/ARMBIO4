@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'jp.co.capcom.android.bio4'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "jp.co.capcom.android.bio4"
+        minSdk 21
+        targetSdk 28
+        versionCode 1
+        versionName "1.00"
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++20'
+                arguments '-DANDROID_STL=c++_shared'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            externalNativeBuild {
+                cmake {
+                    arguments '-DDEBUG_LOG=ON'
+                }
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+            version '3.22.1'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core:1.12.0'
+}

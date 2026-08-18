@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BIOHAZARD 4</string>
+    <string name="error_no_data">Game data not found. Please copy game files to the app data directory.</string>
+    <string name="error_no_so">Game native libraries not found.</string>
+    <string name="oss_licenses_title">Open Source Licenses</string>
+</resources>
